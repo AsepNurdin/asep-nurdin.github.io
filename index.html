@@ -3,90 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asep Nurdin - IT Infrastructure & Network Security</title>
+    <title>Asep Nurdin - Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Header -->
-    <header class="header">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">AN<span class="dot">.</span></a>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
         <div class="container">
-            <div class="header-content">
-                <div class="header-left">
-                    <h1>Asep Nurdin</h1>
-                    <p class="subtitle">IT Infrastructure | Network Security</p>
-                    <p class="description">8+ years of experience building reliable systems and protecting organizations from cyber threats.</p>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Available for opportunities
                 </div>
-                <div class="header-right">
-                    <div class="contact-info">
-                        <a href="mailto:asepnurdin1994@gmail.com">asepnurdin1994@gmail.com</a>
-                        <a href="tel:+6281312014040">+62 813-1201-4040</a>
-                        <span>Garut, Jawa Barat, Indonesia</span>
-                        <a href="https://linkedin.com/in/asepnurdin" target="_blank">linkedin.com/in/asepnurdin</a>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Asep Nurdin</span>
+                </h1>
+                <p class="hero-subtitle">IT Infrastructure & Network Security Specialist</p>
+                <p class="hero-desc">8+ years of experience building reliable systems and protecting organizations from cyber threats.</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Let's Talk</a>
+                    <a href="#experience" class="btn btn-outline">View Work</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">8+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">2</span>
+                        <span class="stat-label">Companies</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label">Certifications</span>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
-    <!-- Main Content -->
-    <main class="container">
-        
-        <!-- Profile Section -->
-        <section class="section">
-            <h2>Profile</h2>
-            <p>With over 8 years of experience in IT Infrastructure, I specialize in building reliable systems and networks that empower businesses. Currently focusing on Cybersecurity as part of the Blue Team, committed to protecting organizations from evolving cyber threats and ensuring digital resilience.</p>
-        </section>
-
-        <!-- Experience Section -->
-        <section class="section">
-            <h2>Work Experience</h2>
-            
-            <div class="experience-item">
-                <div class="experience-header">
-                    <h3>IT Infrastructure & Security</h3>
-                    <span class="period">2023 - Present</span>
-                </div>
-                <p class="company">PT Autocomp System Indonesia</p>
-                <ul>
-                    <li>Monitored and analyzed security events using SIEM and EDR solutions (SentinelOne, Trend Micro)</li>
-                    <li>Managed endpoint security and vulnerability remediation with Tanium</li>
-                    <li>Configured and maintained network security using Fortigate and Palo Alto firewalls</li>
-                    <li>Conducted threat hunting and incident response to mitigate risks and ensure compliance</li>
-                    <li>Managed and maintained physical and virtual servers (Hyper-V, VMware, Proxmox)</li>
-                    <li>Configured and monitored network devices and firewalls (Cisco, Fortigate, Palo Alto)</li>
-                    <li>Implemented backup and disaster recovery solutions (Veeam, Cloud, Unitrend)</li>
-                    <li>Provided advanced troubleshooting and support for infrastructure-related issues</li>
-                    <li>Managed user accounts and permissions through Active Directory and Microsoft O365</li>
-                    <li>Asset control and created work instructions documentation</li>
-                </ul>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">01 — About</span>
+                <h2 class="section-title">Who I Am</h2>
             </div>
-
-            <div class="experience-item">
-                <div class="experience-header">
-                    <h3>IT Support Specialist</h3>
-                    <span class="period">2015 - 2022</span>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>With over <strong>8 years of experience</strong> in IT Infrastructure, I specialize in building reliable systems and networks that empower businesses.</p>
+                    <p>Currently focusing on <strong>Cybersecurity as part of the Blue Team</strong>, committed to protecting organizations from evolving cyber threats and ensuring digital resilience.</p>
                 </div>
-                <p class="company">PT Changsin Reksa Jaya</p>
-                <ul>
-                    <li>Managed user accounts and permissions through Active Directory and Microsoft Exchange</li>
-                    <li>Supported end-users by troubleshooting hardware, software, and network issues</li>
-                    <li>Installed and configured operating systems, applications, and peripheral devices</li>
-                    <li>Troubleshot incidents via ticketing systems</li>
-                    <li>Configured security patches, antivirus solutions, and remote access tools</li>
-                </ul>
+                <div class="about-info">
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <span class="info-label">Location</span>
+                            <span class="info-value">Garut, Indonesia</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"></div>
+                        <div>
+                            <span class="info-label">Focus</span>
+                            <span class="info-value">IT & Security</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">🎯</div>
+                        <div>
+                            <span class="info-label">Role</span>
+                            <span class="info-value">Blue Team</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Skills Section -->
-        <section class="section">
-            <h2>Skills</h2>
-            
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">02 — Experience</span>
+                <h2 class="section-title">Where I've Worked</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>IT Infrastructure & Security</h3>
+                                <p class="company">PT Autocomp System Indonesia</p>
+                            </div>
+                            <span class="period">2023 — Present</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Security monitoring with SIEM & EDR (SentinelOne, Trend Micro)</li>
+                            <li>Network security with Fortigate & Palo Alto firewalls</li>
+                            <li>Server management (Hyper-V, VMware, Proxmox)</li>
+                            <li>Backup & disaster recovery (Veeam, Unitrend)</li>
+                            <li>Threat hunting & incident response</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>IT Support Specialist</h3>
+                                <p class="company">PT Changsin Reksa Jaya</p>
+                            </div>
+                            <span class="period">2015 — 2022</span>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Active Directory & Microsoft Exchange management</li>
+                            <li>End-user support & troubleshooting</li>
+                            <li>OS & application deployment</li>
+                            <li>Security patches & antivirus configuration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">03 — Skills</span>
+                <h2 class="section-title">My Tech Stack</h2>
+            </div>
             <div class="skills-grid">
-                <div class="skill-category">
+                <div class="skill-card featured">
+                    <div class="skill-icon"></div>
                     <h3>Cybersecurity</h3>
-                    <div class="skill-tags">
+                    <p>Protecting systems from threats</p>
+                    <div class="skill-items">
                         <span>Fortigate</span>
                         <span>Palo Alto</span>
                         <span>Sentinel One</span>
@@ -95,88 +174,99 @@
                     </div>
                 </div>
 
-                <div class="skill-category">
+                <div class="skill-card">
+                    <div class="skill-icon">🖥️</div>
                     <h3>Infrastructure</h3>
-                    <div class="skill-tags">
-                        <span>VMware vSphere</span>
+                    <p>Building reliable systems</p>
+                    <div class="skill-items">
+                        <span>VMware</span>
                         <span>Hyper-V</span>
                         <span>Proxmox</span>
                         <span>Veeam</span>
-                        <span>Unitrend</span>
                     </div>
                 </div>
 
-                <div class="skill-category">
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
                     <h3>Networking</h3>
-                    <div class="skill-tags">
+                    <p>Secure connectivity</p>
+                    <div class="skill-items">
                         <span>Cisco</span>
-                        <span>Switches/Routers</span>
                         <span>Firewalls</span>
                         <span>CCNA</span>
                     </div>
                 </div>
 
-                <div class="skill-category">
+                <div class="skill-card">
+                    <div class="skill-icon">️</div>
                     <h3>Systems</h3>
-                    <div class="skill-tags">
-                        <span>Windows OS</span>
+                    <p>Platform management</p>
+                    <div class="skill-items">
+                        <span>Windows</span>
                         <span>Linux</span>
                         <span>Active Directory</span>
-                        <span>Microsoft O365</span>
-                        <span>Computer Troubleshooting</span>
+                        <span>O365</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Certifications Section -->
-        <section class="section">
-            <h2>Certifications</h2>
-            <div class="cert-list">
-                <div class="cert-item">CCNA</div>
-                <div class="cert-item">CFLV - VMware vSphere</div>
-                <div class="cert-item">Fortigate</div>
-                <div class="cert-item">Linux System Administrator</div>
-            </div>
-        </section>
-
-        <!-- Languages Section -->
-        <section class="section">
-            <h2>Languages</h2>
-            <div class="lang-list">
-                <div class="lang-item">
-                    <span class="lang-name">Indonesian</span>
-                    <span class="lang-level">Fluent</span>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-content">
+                    <span class="section-tag">04 — Contact</span>
+                    <h2 class="contact-title">Let's Work Together</h2>
+                    <p class="contact-desc">I'm always open to discussing new opportunities. Feel free to reach out!</p>
+                    <div class="contact-links">
+                        <a href="mailto:asepnurdin1994@gmail.com" class="contact-link">
+                            <span class="contact-icon">✉</span>
+                            <div>
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">asepnurdin1994@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+6281312014040" class="contact-link">
+                            <span class="contact-icon">📱</span>
+                            <div>
+                                <span class="contact-label">Phone</span>
+                                <span class="contact-value">+62 813-1201-4040</span>
+                            </div>
+                        </a>
+                        <a href="https://linkedin.com/in/asepnurdin" target="_blank" class="contact-link">
+                            <span class="contact-icon">💼</span>
+                            <div>
+                                <span class="contact-label">LinkedIn</span>
+                                <span class="contact-value">linkedin.com/in/asepnurdin</span>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="lang-item">
-                    <span class="lang-name">English</span>
-                    <span class="lang-level">Basic</span>
-                </div>
-                <div class="lang-item">
-                    <span class="lang-name">Japanese</span>
-                    <span class="lang-level">Basic</span>
-                </div>
             </div>
-        </section>
-
-        <!-- Reference Section -->
-        <section class="section">
-            <h2>Reference</h2>
-            <div class="reference-card">
-                <h3>Rizki Fahmi</h3>
-                <p class="ref-position">IT Supervisor - PT Autocomp Systems Indonesia</p>
-                <p class="ref-contact">Phone: +62 852-2124-1747</p>
-            </div>
-        </section>
-
-    </main>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Asep Nurdin</p>
+            <div class="footer-content">
+                <p class="footer-logo">AN<span class="dot">.</span></p>
+                <p class="footer-text">© 2026 Asep Nurdin. Crafted with precision.</p>
+            </div>
         </div>
     </footer>
 
+    <script>
+        // Simple mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
