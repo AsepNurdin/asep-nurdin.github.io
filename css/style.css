@@ -789,22 +789,112 @@ footer {
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .hero {
+        padding: 100px 0 60px;
+    }
+
     .hero-title {
         font-size: 2.2em;
     }
 
-    .hero-stats {
+    .hero-subtitle {
+        font-size: 1.1em;
+    }
+
+    .hero-desc {
+        font-size: 1em;
+    }
+
+    .hero-cta {
         flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px 24px;
+    }
+
+    /* Stats counter - buat grid 3 kolom di mobile */
+    .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         gap: 20px;
+        padding-top: 30px;
+    }
+
+    .stat-number {
+        font-size: 2em;
+    }
+
+    .stat-label {
+        font-size: 0.75em;
+    }
+
+    .section-title {
+        font-size: 1.8em;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 
     .timeline-header {
         flex-direction: column;
+        gap: 10px;
     }
 
     .footer-content {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
         text-align: center;
+    }
+
+    /* Perbaiki spacing section */
+    .about, .experience, .skills, .projects, .contact {
+        padding: 60px 0;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .info-card {
+        padding: 15px;
+    }
+
+    .timeline-content {
+        padding: 25px;
+    }
+
+    .skill-card {
+        padding: 25px;
+    }
+
+    .contact-wrapper {
+        padding: 40px 20px;
+    }
+
+    .contact-title {
+        font-size: 1.8em;
+    }
+
+    .contact-link {
+        padding: 20px;
     }
 }
