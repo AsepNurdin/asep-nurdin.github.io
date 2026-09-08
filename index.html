@@ -219,26 +219,51 @@
         </div>
     </section>
     <!-- Projects Section -->
+        <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">04 — Projects</span>
-                <h2 class="section-title">Featured Project</h2>
+                <h2 class="section-title">Featured Projects</h2>
             </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="dmz-architecture.png" alt="DMZ Architecture with Proxmox VE">
-                </div>
-                <div class="project-content">
-                    <h3>DMZ Server Setup with Proxmox VE</h3>
-                    <p>Designed and implemented a DMZ architecture using Proxmox Virtual Environment. The project aimed to separate public-facing services from the internal network to enhance security. Configuration included firewall rules, VLAN segmentation, VM monitoring, and backup server integration.</p>
-                    <div class="project-tech">
-                        <span>Proxmox VE</span>
-                        <span>Firewall</span>
-                        <span>VLAN</span>
-                        <span>Network Security</span>
+            <div class="projects-grid">
+                
+                <!-- Project 1: DMZ Server -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="dmz-architecture.png" alt="DMZ Architecture with Proxmox VE">
+                    </div>
+                    <div class="project-content">
+                        <h3>DMZ Server Setup with Proxmox VE</h3>
+                        <p>Designed and implemented a DMZ architecture using Proxmox Virtual Environment. The project aimed to separate public-facing services from the internal network to enhance security. Configuration included firewall rules, VLAN segmentation, VM monitoring, and backup server integration.</p>
+                        <div class="project-tech">
+                            <span>Proxmox VE</span>
+                            <span>Firewall</span>
+                            <span>VLAN</span>
+                            <span>VMware</span>
+                            <span>Network Security</span>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Project 2: Apache Guacamole -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="guacamole-architecture.png" alt="Remote Access Gateway with Apache Guacamole">
+                    </div>
+                    <div class="project-content">
+                        <h3>Remote Access Gateway with Apache Guacamole</h3>
+                        <p>Implemented a Remote Access Gateway using Apache Guacamole to provide secure web-based access to internal servers. The project focused on enabling vendors and external parties to perform remote access from outside the company with strict security controls. The system was reinforced with double security using mTLS certificates and Multi-Factor Authentication (MFA), and supported RDP, VNC, and SSH protocols.</p>
+                        <div class="project-tech">
+                            <span>Apache Guacamole</span>
+                            <span>mTLS</span>
+                            <span>MFA</span>
+                            <span>RDP/SSH/VNC</span>
+                            <span>Reverse Proxy</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
