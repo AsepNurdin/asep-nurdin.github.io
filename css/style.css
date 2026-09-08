@@ -616,12 +616,20 @@ body {
     background: var(--bg-primary);
 }
 
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+}
+
 .project-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: 16px;
     overflow: hidden;
     transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
@@ -632,7 +640,7 @@ body {
 
 .project-image {
     width: 100%;
-    height: 400px;
+    min-height: 300px;
     background: var(--bg-secondary);
     display: flex;
     align-items: center;
@@ -649,22 +657,26 @@ body {
 }
 
 .project-content {
-    padding: 40px;
+    padding: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-content h3 {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.8em;
+    font-size: 1.5em;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     color: var(--text-primary);
 }
 
 .project-content > p {
     color: var(--text-secondary);
-    font-size: 1em;
-    line-height: 1.8;
+    font-size: 0.95em;
+    line-height: 1.7;
     margin-bottom: 25px;
+    flex-grow: 1;
 }
 
 .project-tech {
@@ -676,7 +688,7 @@ body {
 .project-tech span {
     background: var(--bg-hover);
     color: var(--accent-light);
-    padding: 8px 16px;
+    padding: 6px 14px;
     border-radius: 6px;
     font-size: 0.85em;
     font-weight: 500;
