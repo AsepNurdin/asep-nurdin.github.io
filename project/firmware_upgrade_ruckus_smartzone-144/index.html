@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="/asepnurdin-portfolio/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Base Page Styles */
         .project-detail { 
             padding: 100px 0; 
             background: var(--bg-primary); 
         }
+        
+        /* Refined Header Styles */
         .detail-header { 
             background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(96, 165, 250, 0.03) 100%);
             padding: 60px 40px;
@@ -33,6 +36,8 @@
             color: var(--text-secondary);
             margin-bottom: 40px;
         }
+        
+        /* Logo Cards */
         .client-logos {
             display: flex;
             justify-content: center;
@@ -74,11 +79,7 @@
         .logo-client { background: linear-gradient(135deg, #0F3460, #00D2FF); }
         .logo-vendor { background: linear-gradient(135deg, #E31937, #FF6B6B); }
         .logo-company { background: linear-gradient(135deg, #00E676, #00D2FF); }
-        .logo-text { 
-            text-align: left;
-            flex: 1;
-            min-width: 0;
-        }
+        .logo-text { text-align: left; flex: 1; min-width: 0; }
         .logo-label {
             font-size: 0.65rem;
             color: var(--text-muted);
@@ -95,6 +96,8 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
+        
+        /* Info Grid 3x2 */
         .info-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -135,6 +138,8 @@
             color: var(--text-muted);
             font-weight: 500;
         }
+
+        /* Tables & Lists */
         .device-table {
             width: 100%;
             border-collapse: collapse;
@@ -156,16 +161,10 @@
             border-bottom: 1px solid var(--border);
             color: var(--text-secondary);
         }
-        .device-table tr:last-child td {
-            border-bottom: none;
-        }
-        .device-table tr:hover {
-            background: var(--bg-hover);
-        }
-        .checklist {
-            list-style: none;
-            padding: 0;
-        }
+        .device-table tr:last-child td { border-bottom: none; }
+        .device-table tr:hover { background: var(--bg-hover); }
+        
+        .checklist { list-style: none; padding: 0; }
         .checklist li {
             padding: 12px 0 12px 35px;
             position: relative;
@@ -184,19 +183,26 @@
             content: "☑";
             color: #10b981;
         }
-        .topology-diagram {
+
+        /* Cards & Placeholders */
+        .topology-diagram, .image-placeholder {
             background: var(--bg-card);
-            padding: 40px;
-            border-radius: 12px;
             border: 1px solid var(--border);
-            margin: 30px 0;
+            border-radius: 12px;
+            padding: 40px;
             text-align: center;
-            min-height: 300px;
+            margin: 20px 0;
+            color: var(--text-muted);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--text-muted);
+            flex-direction: column;
         }
+        .image-placeholder {
+            border: 2px dashed var(--border);
+            min-height: 150px;
+        }
+        
         .phase-card {
             background: var(--bg-card);
             padding: 30px;
@@ -210,92 +216,121 @@
             margin-bottom: 15px;
             font-size: 1.3em;
         }
+        
+        .warning-box, .success-box {
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
         .warning-box {
             background: rgba(234, 179, 8, 0.1);
             border: 1px solid rgba(234, 179, 8, 0.3);
             border-left: 4px solid #eab308;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
         }
-        .warning-box strong {
-            color: #eab308;
-        }
+        .warning-box strong { color: #eab308; }
         .success-box {
             background: rgba(16, 185, 129, 0.1);
             border: 1px solid rgba(16, 185, 129, 0.3);
             border-left: 4px solid #10b981;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
         }
-        .success-box strong {
-            color: #10b981;
-        }
-        .image-placeholder {
-            background: var(--bg-hover);
-            border: 2px dashed var(--border);
-            border-radius: 8px;
-            padding: 60px 20px;
-            text-align: center;
-            margin: 20px 0;
-            color: var(--text-muted);
-        }
+        .success-box strong { color: #10b981; }
+
+        /* Refined Verification Grid */
         .verification-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
             margin: 30px 0;
         }
         .verification-item {
             background: var(--bg-card);
-            padding: 20px;
-            border-radius: 12px;
+            padding: 25px;
+            border-radius: 14px;
             border: 1px solid var(--border);
+            transition: all 0.3s;
         }
-        .verification-item h4 {
+        .verification-item:hover {
+            border-color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.1);
+        }
+        .verification-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border);
+        }
+        .verification-icon {
+            font-size: 1.4em;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 10px;
+            flex-shrink: 0;
+        }
+        .verification-header h4 {
             color: var(--accent-light);
-            margin-bottom: 15px;
-            font-size: 1em;
+            margin: 0;
+            font-size: 1.05em;
+            font-weight: 600;
         }
-        .verification-item p {
+        .verification-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .verification-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 14px;
+            background: var(--bg-hover);
+            border-radius: 8px;
+            border: 1px solid transparent;
+            transition: all 0.2s;
+        }
+        .verification-row:hover {
+            border-color: var(--border-light);
+            background: rgba(255,255,255,0.03);
+        }
+        .verification-label {
             color: var(--text-secondary);
             font-size: 0.9em;
-            line-height: 1.6;
+            font-weight: 500;
         }
-        .status-badge {
-            display: inline-block;
-            background: rgba(16, 185, 129, 0.2);
-            color: #10b981;
-            padding: 4px 12px;
-            border-radius: 12px;
+        .verification-status {
             font-size: 0.85em;
             font-weight: 600;
-            margin-left: 10px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            white-space: nowrap;
         }
+        .verification-status.success {
+            background: rgba(16, 185, 129, 0.15);
+            color: #10b981;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        .verification-status.success::before {
+            content: "✓ ";
+            font-weight: bold;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            .detail-header {
-                padding: 40px 20px;
-            }
-            .detail-header .hero-title {
-                font-size: 2.2em;
-            }
-            .client-logos {
-                flex-direction: column;
-                align-items: center;
-            }
-            .logo-card {
-                max-width: 100%;
-            }
-            .info-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 12px;
-            }
+            .detail-header { padding: 40px 20px; }
+            .detail-header .hero-title { font-size: 2.2em; }
+            .client-logos { flex-direction: column; align-items: center; }
+            .logo-card { max-width: 100%; }
+            .info-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+            .verification-grid { grid-template-columns: 1fr; }
         }
         @media (max-width: 480px) {
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
+            .info-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -313,6 +348,8 @@
 
     <section class="project-detail">
         <div class="container">
+            
+            <!-- Header Section -->
             <div class="detail-header">
                 <span class="section-tag">Project Documentation</span>
                 <h1 class="hero-title">Upgrade Firmware Ruckus SmartZone 144</h1>
@@ -322,7 +359,7 @@
                     <div class="logo-card">
                         <div class="logo-icon logo-client">PT</div>
                         <div class="logo-text">
-                            <div class="logo-label">Company Name</div>
+                            <div class="logo-label">Client</div>
                             <div class="logo-name">PT Autocomp System Indonesia</div>
                         </div>
                     </div>
@@ -337,7 +374,7 @@
                         <div class="logo-icon logo-company">IT</div>
                         <div class="logo-text">
                             <div class="logo-label">Implemented by</div>
-                            <div class="logo-name">Infrstructure Team</div>
+                            <div class="logo-name">IT Infrastructure Team</div>
                         </div>
                     </div>
                 </div>
@@ -376,7 +413,7 @@
                 </div>
             </div>
 
-            <!-- Section 01: Overview -->
+            <!-- 01 Overview -->
             <section class="section">
                 <h2>01 — Overview</h2>
                 <p style="font-size: 1.1em; color: var(--text-secondary); margin-bottom: 30px;">
@@ -395,144 +432,57 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td><strong>SmartZone 144 #1</strong></td>
-                            <td>[ hostname-sz1 ]</td>
-                            <td>[ x.x.x.x ]</td>
-                            <td>Active</td>
-                            <td>[ x.x.x.x ]</td>
-                        </tr>
-                        <tr>
-                            <td><strong>SmartZone 144 #2</strong></td>
-                            <td>[ hostname-sz2 ]</td>
-                            <td>[ x.x.x.x ]</td>
-                            <td>Standby</td>
-                            <td>[ x.x.x.x ]</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Cluster VIP</strong></td>
-                            <td>[ hostname-vip ]</td>
-                            <td>[ x.x.x.x ]</td>
-                            <td>Virtual IP</td>
-                            <td>—</td>
-                        </tr>
-                        <tr>
-                            <td><strong>AP #1</strong></td>
-                            <td>[ hostname-ap1 ]</td>
-                            <td>[ x.x.x.x ]</td>
-                            <td>Connected</td>
-                            <td>[ x.x.x.x ]</td>
-                        </tr>
-                        <tr>
-                            <td><strong>AP #2</strong></td>
-                            <td>[ hostname-ap2 ]</td>
-                            <td>[ x.x.x.x ]</td>
-                            <td>Connected</td>
-                            <td>[ x.x.x.x ]</td>
-                        </tr>
-                        <tr>
-                            <td><strong>AP #3</strong></td>
-                            <td>[ hostname-ap3 ]</td>
-                            <td>[ x.x.x.x ]</td>
-                            <td>Connected</td>
-                            <td>[ x.x.x.x ]</td>
-                        </tr>
-                        <tr>
-                            <td><strong>AP #4</strong></td>
-                            <td>[ hostname-ap4 ]</td>
-                            <td>[ x.x.x.x ]</td>
-                            <td>Connected</td>
-                            <td>[ x.x.x.x ]</td>
-                        </tr>
-                        <tr>
-                            <td><strong>AP #5</strong></td>
-                            <td>[ hostname-ap5 ]</td>
-                            <td>[ x.x.x.x ]</td>
-                            <td>Connected</td>
-                            <td>[ x.x.x.x ]</td>
-                        </tr>
-                        <tr>
-                            <td><strong>AP #6</strong></td>
-                            <td>[ hostname-ap6 ]</td>
-                            <td>[ x.x.x.x ]</td>
-                            <td>Connected</td>
-                            <td>[ x.x.x.x ]</td>
-                        </tr>
+                        <tr><td><strong>SmartZone 144 #1</strong></td><td>[ hostname-sz1 ]</td><td>[ x.x.x.x ]</td><td>Active</td><td>[ x.x.x.x ]</td></tr>
+                        <tr><td><strong>SmartZone 144 #2</strong></td><td>[ hostname-sz2 ]</td><td>[ x.x.x.x ]</td><td>Standby</td><td>[ x.x.x.x ]</td></tr>
+                        <tr><td><strong>Cluster VIP</strong></td><td>[ hostname-vip ]</td><td>[ x.x.x.x ]</td><td>Virtual IP</td><td>—</td></tr>
+                        <tr><td><strong>AP #1</strong></td><td>[ hostname-ap1 ]</td><td>[ x.x.x.x ]</td><td>Connected</td><td>[ x.x.x.x ]</td></tr>
+                        <tr><td><strong>AP #2</strong></td><td>[ hostname-ap2 ]</td><td>[ x.x.x.x ]</td><td>Connected</td><td>[ x.x.x.x ]</td></tr>
+                        <tr><td><strong>AP #3</strong></td><td>[ hostname-ap3 ]</td><td>[ x.x.x.x ]</td><td>Connected</td><td>[ x.x.x.x ]</td></tr>
+                        <tr><td><strong>AP #4</strong></td><td>[ hostname-ap4 ]</td><td>[ x.x.x.x ]</td><td>Connected</td><td>[ x.x.x.x ]</td></tr>
+                        <tr><td><strong>AP #5</strong></td><td>[ hostname-ap5 ]</td><td>[ x.x.x.x ]</td><td>Connected</td><td>[ x.x.x.x ]</td></tr>
+                        <tr><td><strong>AP #6</strong></td><td>[ hostname-ap6 ]</td><td>[ x.x.x.x ]</td><td>Connected</td><td>[ x.x.x.x ]</td></tr>
                     </tbody>
                 </table>
 
                 <h3 style="color: var(--accent-light); margin: 30px 0 20px;">Network Topology Diagram</h3>
                 <div class="topology-diagram">
-                    <div>
-                        <div style="font-size: 3em; margin-bottom: 20px;"></div>
-                        <p>[ Insert Network Topology Diagram Here ]</p>
-                        <p style="font-size: 0.9em; margin-top: 10px;">Replace with actual topology screenshot</p>
-                    </div>
+                    <div style="font-size: 3em; margin-bottom: 20px;"></div>
+                    <p>[ Insert Network Topology Diagram Here ]</p>
+                    <p style="font-size: 0.9em; margin-top: 10px;">Replace with actual topology screenshot</p>
                 </div>
 
                 <h3 style="color: var(--accent-light); margin: 30px 0 20px;">SmartZone Dashboard (Before Upgrade)</h3>
                 <div class="image-placeholder">
                     <div style="font-size: 2em; margin-bottom: 10px;"></div>
                     <p>Screenshot Dashboard SZ-144 #1</p>
-                    <p style="font-size: 0.9em; margin-top: 10px;">[ Insert screenshot here ]</p>
                 </div>
                 <div class="image-placeholder">
                     <div style="font-size: 2em; margin-bottom: 10px;">🖥️</div>
                     <p>Screenshot Dashboard SZ-144 #2</p>
-                    <p style="font-size: 0.9em; margin-top: 10px;">[ Insert screenshot here ]</p>
                 </div>
             </section>
 
-            <!-- Section 02: Preparation -->
+            <!-- 02 Preparation -->
             <section class="section">
                 <h2>02 — Preparation</h2>
                 <p style="font-size: 1.1em; color: var(--text-secondary); margin-bottom: 30px;">
                     Preparation steps conducted before starting the upgrade to ensure smooth execution and minimize downtime risks.
                 </p>
 
-                <div class="phase-card">
-                    <h3> Maintenance Window</h3>
-                    <p style="color: var(--text-secondary); line-height: 1.7;">Schedule maintenance window and inform stakeholders about potential downtime.</p>
-                </div>
-
-                <div class="phase-card">
-                    <h3>💾 Backup Configuration</h3>
-                    <p style="color: var(--text-secondary); line-height: 1.7;">Perform full configuration backup on both SmartZone 144 controllers (Active & Standby).</p>
-                </div>
-
-                <div class="phase-card">
-                    <h3> Download Firmware</h3>
-                    <p style="color: var(--text-secondary); line-height: 1.7;">Download latest firmware image from Ruckus/CommScope support portal and verify checksum.</p>
-                </div>
-
-                <div class="phase-card">
-                    <h3>✅ Compatibility Check</h3>
-                    <p style="color: var(--text-secondary); line-height: 1.7;">Check compatibility matrix between firmware version, AP models, and active features.</p>
-                </div>
-
-                <div class="phase-card">
-                    <h3>🔑 License & Support</h3>
-                    <p style="color: var(--text-secondary); line-height: 1.7;">Ensure active license and support contract for access to latest firmware.</p>
-                </div>
-
-                <div class="phase-card">
-                    <h3>📞 Rollback Plan</h3>
-                    <p style="color: var(--text-secondary); line-height: 1.7;">Prepare rollback plan including previous firmware image and restore procedures.</p>
-                </div>
+                <div class="phase-card"><h3> Maintenance Window</h3><p style="color: var(--text-secondary); line-height: 1.7;">Schedule maintenance window and inform stakeholders about potential downtime.</p></div>
+                <div class="phase-card"><h3>💾 Backup Configuration</h3><p style="color: var(--text-secondary); line-height: 1.7;">Perform full configuration backup on both SmartZone 144 controllers (Active & Standby).</p></div>
+                <div class="phase-card"><h3>📦 Download Firmware</h3><p style="color: var(--text-secondary); line-height: 1.7;">Download latest firmware image from Ruckus/CommScope support portal and verify checksum.</p></div>
+                <div class="phase-card"><h3>✅ Compatibility Check</h3><p style="color: var(--text-secondary); line-height: 1.7;">Check compatibility matrix between firmware version, AP models, and active features.</p></div>
+                <div class="phase-card"><h3>🔑 License & Support</h3><p style="color: var(--text-secondary); line-height: 1.7;">Ensure active license and support contract for access to latest firmware.</p></div>
+                <div class="phase-card"><h3>📞 Rollback Plan</h3><p style="color: var(--text-secondary); line-height: 1.7;">Prepare rollback plan including previous firmware image and restore procedures.</p></div>
 
                 <div class="warning-box">
                     <strong>⚠️ Important:</strong> Ensure downloaded firmware file matches SZ-144 model and recommended version by Ruckus/CommScope. Always verify MD5/SHA256 checksum before use.
                 </div>
 
                 <h3 style="color: var(--accent-light); margin: 30px 0 20px;">Preparation Documentation</h3>
-                <div class="image-placeholder">
-                    <div style="font-size: 2em; margin-bottom: 10px;">💾</div>
-                    <p>Backup Configuration Screenshot</p>
-                </div>
-                <div class="image-placeholder">
-                    <div style="font-size: 2em; margin-bottom: 10px;">📦</div>
-                    <p>Firmware File Screenshot</p>
-                </div>
+                <div class="image-placeholder"><div style="font-size: 2em; margin-bottom: 10px;">💾</div><p>Backup Configuration Screenshot</p></div>
+                <div class="image-placeholder"><div style="font-size: 2em; margin-bottom: 10px;">📦</div><p>Firmware File Screenshot</p></div>
 
                 <h3 style="color: var(--accent-light); margin: 30px 0 20px;">Preparation Checklist</h3>
                 <ul class="checklist">
@@ -546,50 +496,23 @@
                 </ul>
             </section>
 
-            <!-- Section 03: Pre-Upgrade Check -->
+            <!-- 03 Pre-Upgrade Check -->
             <section class="section">
                 <h2>03 — Pre-Upgrade Health Check</h2>
                 <p style="font-size: 1.1em; color: var(--text-secondary); margin-bottom: 30px;">
                     Comprehensive examination of cluster condition and all devices before starting the upgrade process.
                 </p>
 
-                <div class="phase-card">
-                    <h3>🔗 Cluster Status</h3>
-                    <p style="color: var(--text-secondary); line-height: 1.7;">Ensure HA cluster is healthy, sync is active, and failover is functioning normally.</p>
-                </div>
-
-                <div class="phase-card">
-                    <h3>📡 AP Connectivity</h3>
-                    <p style="color: var(--text-secondary); line-height: 1.7;">Verify all 6 APs are connected and operating normally on the controller.</p>
-                </div>
-
-                <div class="phase-card">
-                    <h3>💿 Disk Space & Resources</h3>
-                    <p style="color: var(--text-secondary); line-height: 1.7;">Check disk space availability, CPU, and memory on both controllers.</p>
-                </div>
-
-                <div class="phase-card">
-                    <h3>🚨 Active Alarms</h3>
-                    <p style="color: var(--text-secondary); line-height: 1.7;">Ensure no critical alarms are active before starting the upgrade.</p>
-                </div>
+                <div class="phase-card"><h3>🔗 Cluster Status</h3><p style="color: var(--text-secondary); line-height: 1.7;">Ensure HA cluster is healthy, sync is active, and failover is functioning normally.</p></div>
+                <div class="phase-card"><h3>📡 AP Connectivity</h3><p style="color: var(--text-secondary); line-height: 1.7;">Verify all 6 APs are connected and operating normally on the controller.</p></div>
+                <div class="phase-card"><h3>💿 Disk Space & Resources</h3><p style="color: var(--text-secondary); line-height: 1.7;">Check disk space availability, CPU, and memory on both controllers.</p></div>
+                <div class="phase-card"><h3>🚨 Active Alarms</h3><p style="color: var(--text-secondary); line-height: 1.7;">Ensure no critical alarms are active before starting the upgrade.</p></div>
 
                 <h3 style="color: var(--accent-light); margin: 30px 0 20px;">Health Check Results</h3>
-                <div class="image-placeholder">
-                    <div style="font-size: 2em; margin-bottom: 10px;"></div>
-                    <p>Cluster Status – Healthy</p>
-                </div>
-                <div class="image-placeholder">
-                    <div style="font-size: 2em; margin-bottom: 10px;">📡</div>
-                    <p>AP List – 6 APs Connected</p>
-                </div>
-                <div class="image-placeholder">
-                    <div style="font-size: 2em; margin-bottom: 10px;">💿</div>
-                    <p>System Resources</p>
-                </div>
-                <div class="image-placeholder">
-                    <div style="font-size: 2em; margin-bottom: 10px;">🚨</div>
-                    <p>Alarm / Event Log</p>
-                </div>
+                <div class="image-placeholder"><div style="font-size: 2em; margin-bottom: 10px;"></div><p>Cluster Status – Healthy</p></div>
+                <div class="image-placeholder"><div style="font-size: 2em; margin-bottom: 10px;">📡</div><p>AP List – 6 APs Connected</p></div>
+                <div class="image-placeholder"><div style="font-size: 2em; margin-bottom: 10px;">💿</div><p>System Resources</p></div>
+                <div class="image-placeholder"><div style="font-size: 2em; margin-bottom: 10px;">🚨</div><p>Alarm / Event Log</p></div>
 
                 <ul class="checklist">
                     <li class="checked">Cluster HA status: Healthy — Active/Standby sync normal</li>
@@ -606,7 +529,7 @@
                 </div>
             </section>
 
-            <!-- Section 04: Upgrade Process -->
+            <!-- 04 Upgrade Process -->
             <section class="section">
                 <h2>04 — Upgrade Process</h2>
                 <p style="font-size: 1.1em; color: var(--text-secondary); margin-bottom: 30px;">
@@ -619,101 +542,43 @@
 
                 <div class="phase-card">
                     <h3>Step 1: Upload Firmware to SmartZone</h3>
-                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 15px;">
-                        Upload firmware image file to controller via GUI (Administration > Upgrade) or SCP/FTP. Wait until upload process completes 100%.
-                    </p>
-                    <p style="color: var(--text-muted); font-size: 0.9em;">
-                        <strong>GUI Path:</strong> Administration → Upgrade → Upload Image<br>
-                        <strong>File:</strong> [ firmware_filename.img ]<br>
-                        <strong>Size:</strong> [ xxx MB ]<br>
-                        <strong>Target:</strong> SZ-144 Cluster
-                    </p>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 15px;">Upload firmware image file to controller via GUI (Administration > Upgrade) or SCP/FTP. Wait until upload process completes 100%.</p>
+                    <p style="color: var(--text-muted); font-size: 0.9em;"><strong>GUI Path:</strong> Administration → Upgrade → Upload Image<br><strong>File:</strong> [ firmware_filename.img ]<br><strong>Target:</strong> SZ-144 Cluster</p>
                 </div>
-
                 <div class="phase-card">
                     <h3>Step 2: Upgrade Standby Controller (SZ-144 #2)</h3>
-                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 15px;">
-                        Initiate upgrade on the Standby node first. Controller will automatically reboot after upgrade completion. Wait until node comes back online and syncs with Active node.
-                    </p>
-                    <p style="color: var(--text-muted); font-size: 0.9em;">
-                        <strong>Target:</strong> SZ-144 #2 (Standby) — [ x.x.x.x ]<br>
-                        <strong>Action:</strong> Upgrade → Reboot<br>
-                        <strong>Estimated Time:</strong> ± 20-40 minutes<br>
-                        <strong>Status:</strong> [ Waiting / In Progress / Complete ]
-                    </p>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 15px;">Initiate upgrade on the Standby node first. Controller will automatically reboot after upgrade completion. Wait until node comes back online and syncs with Active node.</p>
+                    <p style="color: var(--text-muted); font-size: 0.9em;"><strong>Target:</strong> SZ-144 #2 (Standby) — [ x.x.x.x ]<br><strong>Action:</strong> Upgrade → Reboot<br><strong>Estimated Time:</strong> ± 20-40 minutes</p>
                 </div>
-
                 <div class="phase-card">
                     <h3>Step 3: Verify Standby Controller Post-Upgrade</h3>
-                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 15px;">
-                        After SZ-144 #2 comes back online, verify new firmware version and ensure cluster sync is back to normal before proceeding.
-                    </p>
-                    <p style="color: var(--text-muted); font-size: 0.9em;">
-                        <strong>Check:</strong> SZ-144 #2 firmware version → [ x.x.x.x ]<br>
-                        <strong>Check:</strong> Cluster sync status → Healthy<br>
-                        <strong>Check:</strong> AP connectivity → 6/6 Connected
-                    </p>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 15px;">After SZ-144 #2 comes back online, verify new firmware version and ensure cluster sync is back to normal before proceeding.</p>
+                    <p style="color: var(--text-muted); font-size: 0.9em;"><strong>Check:</strong> SZ-144 #2 firmware version → [ x.x.x.x ]<br><strong>Check:</strong> Cluster sync status → Healthy<br><strong>Check:</strong> AP connectivity → 6/6 Connected</p>
                 </div>
-
                 <div class="phase-card">
                     <h3>Step 4: Failover – Switchover Active to Standby</h3>
-                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 15px;">
-                        Perform manual switchover/failover so that SZ-144 #2 (which has been upgraded) becomes Active, and SZ-144 #1 becomes Standby. APs will reconnect to the new controller.
-                    </p>
-                    <p style="color: var(--text-muted); font-size: 0.9em;">
-                        <strong>Action:</strong> Administration → Cluster → Switchover<br>
-                        <strong>New Active:</strong> SZ-144 #2 [ x.x.x.x ]<br>
-                        <strong>New Standby:</strong> SZ-144 #1 [ x.x.x.x ]<br>
-                        <strong>AP Reconnection:</strong> Expected ± 1-3 minutes
-                    </p>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 15px;">Perform manual switchover/failover so that SZ-144 #2 (which has been upgraded) becomes Active, and SZ-144 #1 becomes Standby. APs will reconnect to the new controller.</p>
+                    <p style="color: var(--text-muted); font-size: 0.9em;"><strong>Action:</strong> Administration → Cluster → Switchover<br><strong>New Active:</strong> SZ-144 #2 [ x.x.x.x ]<br><strong>New Standby:</strong> SZ-144 #1 [ x.x.x.x ]</p>
                 </div>
-
                 <div class="phase-card">
                     <h3>Step 5: Upgrade Previously Active Controller (SZ-144 #1)</h3>
-                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 15px;">
-                        Now SZ-144 #1 is in Standby status. Perform firmware upgrade on this node. Controller will reboot and come back online with new firmware.
-                    </p>
-                    <p style="color: var(--text-muted); font-size: 0.9em;">
-                        <strong>Target:</strong> SZ-144 #1 (now Standby) — [ x.x.x.x ]<br>
-                        <strong>Action:</strong> Upgrade → Reboot<br>
-                        <strong>Estimated Time:</strong> ± 20-40 minutes<br>
-                        <strong>Status:</strong> [ Waiting / In Progress / Complete ]
-                    </p>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 15px;">Now SZ-144 #1 is in Standby status. Perform firmware upgrade on this node. Controller will reboot and come back online with new firmware.</p>
+                    <p style="color: var(--text-muted); font-size: 0.9em;"><strong>Target:</strong> SZ-144 #1 (now Standby) — [ x.x.x.x ]<br><strong>Action:</strong> Upgrade → Reboot<br><strong>Estimated Time:</strong> ± 20-40 minutes</p>
                 </div>
-
                 <div class="phase-card">
                     <h3>Step 6: Verify Cluster & AP Auto-Upgrade</h3>
-                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 15px;">
-                        After both controllers are running new firmware, APs will automatically perform firmware upgrade in stages (rolling upgrade). Monitor the process until all 6 APs are completed.
-                    </p>
-                    <p style="color: var(--text-muted); font-size: 0.9em;">
-                        <strong>Check:</strong> Both SZ firmware → [ x.x.x.x ] ✓<br>
-                        <strong>Check:</strong> Cluster HA → Healthy ✓<br>
-                        <strong>Check:</strong> AP Auto-Upgrade → 6/6 Complete<br>
-                        <strong>AP Upgrade Path:</strong> Administration → AP → Firmware
-                    </p>
+                    <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 15px;">After both controllers are running new firmware, APs will automatically perform firmware upgrade in stages (rolling upgrade). Monitor the process until all 6 APs are completed.</p>
+                    <p style="color: var(--text-muted); font-size: 0.9em;"><strong>Check:</strong> Both SZ firmware → [ x.x.x.x ] ✓<br><strong>Check:</strong> Cluster HA → Healthy ✓<br><strong>Check:</strong> AP Auto-Upgrade → 6/6 Complete</p>
                 </div>
 
                 <h3 style="color: var(--accent-light); margin: 30px 0 20px;">Upgrade Process Documentation</h3>
-                <div class="image-placeholder">
-                    <div style="font-size: 2em; margin-bottom: 10px;">⬆️</div>
-                    <p>Upload Firmware Image</p>
-                </div>
-                <div class="image-placeholder">
-                    <div style="font-size: 2em; margin-bottom: 10px;">🔄</div>
-                    <p>Upgrade Progress – Standby</p>
-                </div>
-                <div class="image-placeholder">
-                    <div style="font-size: 2em; margin-bottom: 10px;">🔀</div>
-                    <p>Failover / Switchover</p>
-                </div>
-                <div class="image-placeholder">
-                    <div style="font-size: 2em; margin-bottom: 10px;">📡</div>
-                    <p>AP Auto-Upgrade Progress</p>
-                </div>
+                <div class="image-placeholder"><div style="font-size: 2em; margin-bottom: 10px;">⬆️</div><p>Upload Firmware Image</p></div>
+                <div class="image-placeholder"><div style="font-size: 2em; margin-bottom: 10px;">🔄</div><p>Upgrade Progress – Standby</p></div>
+                <div class="image-placeholder"><div style="font-size: 2em; margin-bottom: 10px;">🔀</div><p>Failover / Switchover</p></div>
+                <div class="image-placeholder"><div style="font-size: 2em; margin-bottom: 10px;">📡</div><p>AP Auto-Upgrade Progress</p></div>
             </section>
 
-            <!-- Section 05: Verification -->
+            <!-- 05 Post-Upgrade Verification (REFINED) -->
             <section class="section">
                 <h2>05 — Post-Upgrade Verification</h2>
                 <p style="font-size: 1.1em; color: var(--text-secondary); margin-bottom: 30px;">
@@ -722,60 +587,111 @@
 
                 <div class="verification-grid">
                     <div class="verification-item">
-                        <h4>🔗 Cluster Status</h4>
-                        <p>
-                            <strong>HA Mode:</strong> Active/Standby <span class="status-badge">✓</span><br>
-                            <strong>Sync Status:</strong> In-Sync <span class="status-badge">✓</span><br>
-                            <strong>SZ-144 #1 FW:</strong> [ x.x.x.x ] <span class="status-badge">✓</span><br>
-                            <strong>SZ-144 #2 FW:</strong> [ x.x.x.x ] <span class="status-badge">✓</span>
-                        </p>
+                        <div class="verification-header">
+                            <span class="verification-icon">🔗</span>
+                            <h4>Cluster Status</h4>
+                        </div>
+                        <div class="verification-list">
+                            <div class="verification-row">
+                                <span class="verification-label">HA Mode</span>
+                                <span class="verification-status success">Active/Standby</span>
+                            </div>
+                            <div class="verification-row">
+                                <span class="verification-label">Sync Status</span>
+                                <span class="verification-status success">In-Sync</span>
+                            </div>
+                            <div class="verification-row">
+                                <span class="verification-label">SZ-144 #1 FW</span>
+                                <span class="verification-status success">[ x.x.x.x ]</span>
+                            </div>
+                            <div class="verification-row">
+                                <span class="verification-label">SZ-144 #2 FW</span>
+                                <span class="verification-status success">[ x.x.x.x ]</span>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="verification-item">
-                        <h4>📡 AP Status (6/6)</h4>
-                        <p>
-                            <strong>AP Connected:</strong> 6 / 6 <span class="status-badge">✓</span><br>
-                            <strong>AP FW Version:</strong> [ x.x.x.x ] <span class="status-badge">✓</span><br>
-                            <strong>AP Upgrade Status:</strong> Complete <span class="status-badge">✓</span><br>
-                            <strong>Client Associated:</strong> [ xx ] clients <span class="status-badge">✓</span>
-                        </p>
+                        <div class="verification-header">
+                            <span class="verification-icon">📡</span>
+                            <h4>AP Status (6/6)</h4>
+                        </div>
+                        <div class="verification-list">
+                            <div class="verification-row">
+                                <span class="verification-label">AP Connected</span>
+                                <span class="verification-status success">6 / 6</span>
+                            </div>
+                            <div class="verification-row">
+                                <span class="verification-label">AP FW Version</span>
+                                <span class="verification-status success">[ x.x.x.x ]</span>
+                            </div>
+                            <div class="verification-row">
+                                <span class="verification-label">AP Upgrade Status</span>
+                                <span class="verification-status success">Complete</span>
+                            </div>
+                            <div class="verification-row">
+                                <span class="verification-label">Client Associated</span>
+                                <span class="verification-status success">[ xx ] clients</span>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="verification-item">
-                        <h4>⚙️ System Health</h4>
-                        <p>
-                            <strong>CPU Usage:</strong> [ xx% ] <span class="status-badge">✓</span><br>
-                            <strong>Memory Usage:</strong> [ xx% ] <span class="status-badge">✓</span><br>
-                            <strong>Disk Space:</strong> [ xx GB ] <span class="status-badge">✓</span><br>
-                            <strong>Active Alarms:</strong> 0 Critical <span class="status-badge">✓</span>
-                        </p>
+                        <div class="verification-header">
+                            <span class="verification-icon">⚙️</span>
+                            <h4>System Health</h4>
+                        </div>
+                        <div class="verification-list">
+                            <div class="verification-row">
+                                <span class="verification-label">CPU Usage</span>
+                                <span class="verification-status success">[ xx% ]</span>
+                            </div>
+                            <div class="verification-row">
+                                <span class="verification-label">Memory Usage</span>
+                                <span class="verification-status success">[ xx% ]</span>
+                            </div>
+                            <div class="verification-row">
+                                <span class="verification-label">Disk Space</span>
+                                <span class="verification-status success">[ xx GB ]</span>
+                            </div>
+                            <div class="verification-row">
+                                <span class="verification-label">Active Alarms</span>
+                                <span class="verification-status success">0 Critical</span>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="verification-item">
-                        <h4>🌐 Network & Services</h4>
-                        <p>
-                            <strong>SSID Broadcasting:</strong> All Active <span class="status-badge">✓</span><br>
-                            <strong>Client Connectivity:</strong> Normal <span class="status-badge">✓</span><br>
-                            <strong>DHCP / VLAN:</strong> Working <span class="status-badge">✓</span><br>
-                            <strong>Throughput Test:</strong> [ xxx Mbps ] <span class="status-badge">✓</span>
-                        </p>
+                        <div class="verification-header">
+                            <span class="verification-icon"></span>
+                            <h4>Network & Services</h4>
+                        </div>
+                        <div class="verification-list">
+                            <div class="verification-row">
+                                <span class="verification-label">SSID Broadcasting</span>
+                                <span class="verification-status success">All Active</span>
+                            </div>
+                            <div class="verification-row">
+                                <span class="verification-label">Client Connectivity</span>
+                                <span class="verification-status success">Normal</span>
+                            </div>
+                            <div class="verification-row">
+                                <span class="verification-label">DHCP / VLAN</span>
+                                <span class="verification-status success">Working</span>
+                            </div>
+                            <div class="verification-row">
+                                <span class="verification-label">Throughput Test</span>
+                                <span class="verification-status success">[ xxx Mbps ]</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <h3 style="color: var(--accent-light); margin: 30px 0 20px;">Verification Documentation</h3>
-                <div class="image-placeholder">
-                    <div style="font-size: 2em; margin-bottom: 10px;">✅</div>
-                    <p>Dashboard Post-Upgrade</p>
-                </div>
-                <div class="image-placeholder">
-                    <div style="font-size: 2em; margin-bottom: 10px;">📡</div>
-                    <p>AP List – All Upgraded</p>
-                </div>
-                <div class="image-placeholder">
-                    <div style="font-size: 2em; margin-bottom: 10px;">🔗</div>
-                    <p>Cluster Status – Healthy</p>
-                </div>
-                <div class="image-placeholder">
-                    <div style="font-size: 2em; margin-bottom: 10px;">📊</div>
-                    <p>System Resources Post-Upgrade</p>
-                </div>
+                <div class="image-placeholder"><div style="font-size: 2em; margin-bottom: 10px;">✅</div><p>Dashboard Post-Upgrade</p></div>
+                <div class="image-placeholder"><div style="font-size: 2em; margin-bottom: 10px;">📡</div><p>AP List – All Upgraded</p></div>
+                <div class="image-placeholder"><div style="font-size: 2em; margin-bottom: 10px;"></div><p>Cluster Status – Healthy</p></div>
+                <div class="image-placeholder"><div style="font-size: 2em; margin-bottom: 10px;">📊</div><p>System Resources Post-Upgrade</p></div>
 
                 <ul class="checklist">
                     <li class="checked">Both SZ-144 running new firmware version [ x.x.x.x ]</li>
@@ -792,7 +708,7 @@
                 </div>
             </section>
 
-            <!-- Section 06: Closing -->
+            <!-- 06 Closing -->
             <section class="section">
                 <h2>06 — Closing</h2>
                 <p style="font-size: 1.1em; color: var(--text-secondary); margin-bottom: 30px;">
@@ -807,11 +723,11 @@
                     </div>
                     <div class="info-box">
                         <div class="info-box-label">📝 Issues / Notes</div>
-                        <div class="info-box-value" style="font-size: 0.9em;">[ Describe any issues encountered and resolutions ]</div>
+                        <div class="info-box-value" style="font-size: 0.9em;">[ Describe any issues encountered ]</div>
                         <div class="info-box-sub">If any</div>
                     </div>
                     <div class="info-box">
-                        <div class="info-box-label">📌 Recommendations</div>
+                        <div class="info-box-label"> Recommendations</div>
                         <div class="info-box-value" style="font-size: 0.9em;">[ Recommendations for next upgrade ]</div>
                         <div class="info-box-sub">Best practices</div>
                     </div>
@@ -849,16 +765,5 @@
         </div>
     </footer>
 
-    <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
-        
-        if (hamburger) {
-            hamburger.addEventListener('click', () => {
-                hamburger.classList.toggle('active');
-                navMenu.classList.toggle('active');
-            });
-        }
-    </script>
 </body>
 </html>
